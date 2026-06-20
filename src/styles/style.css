@@ -805,6 +805,10 @@ body.no-webgl {
     width: 100%;
     max-width: 440px;
     min-height: 150px;
+    /* stacked column: size to content and top-align, so the index number
+       isn't clipped off the top by flex-basis:0 + bottom alignment */
+    flex: 0 0 auto;
+    align-items: flex-start;
   }
   .morph__block-index,
   .morph__block-title,
