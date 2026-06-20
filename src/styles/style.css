@@ -794,7 +794,7 @@ body.no-webgl {
   .morph__inner {
     position: static;
     height: auto;
-    padding: 14vh clamp(22px, 6vw, 80px);
+    padding: 8vh clamp(22px, 6vw, 80px);
   }
   .morph__blocks {
     flex-direction: column;
@@ -921,6 +921,13 @@ body.no-webgl {
   }
   .work-grid {
     grid-template-columns: 1fr;
+  }
+  /* Don't reserve a full screen per section on mobile — short cards floating
+     in a centered 100vh void leave big distracting gaps between sections.
+     Size to content with tight, even spacing instead. */
+  .panel {
+    min-height: auto;
+    padding: 8vh clamp(22px, 6vw, 80px);
   }
 }
 
